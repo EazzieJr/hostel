@@ -2,6 +2,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  server: {
+    host: process.env.HOST || '0.0.0.0',
+    port: process.env.PORT || 8080
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'hostel',
@@ -35,10 +40,18 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    // Google fonts
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
+
+  googleFonts: {
+    families: {
+      Leckerli: [ 400 ],
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
