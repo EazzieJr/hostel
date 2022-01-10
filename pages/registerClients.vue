@@ -1,50 +1,30 @@
 <template>
-  <section class="login flex justify-center">
+    <section class="login flex justify-center">
         <div class="login-container w-screen h-screen flex flex-col justify-center items-center bg-center bg-cover bg-no-repeat space-y-5" style="background-image: url(/images/Splash-bg.png);">
             <form class="w-80 px-8 py-8 bg-white rounded-3xl shadow-xl" action="">
                 <h2 class="header font-sans font-bold text-[#2D3748] text-left text-xl">
-                    Register With
+                    Create new listing
                 </h2>
 
-                <div class="social-medias-container flex space-x-5 mt-5">
-                    <button class="social-media p-4 border rounded-xl" v-for="socialCard in socialCards" :key="socialCard">
-                        <img class="w-5" :src="socialCard.image" alt="Facebook">
-                    </button>
-                </div>
-
-                <p class="or text-base text-[#A0AEC0] font-bold my-7">
-                    or
-                </p>
-
-                <div class="details space-y-5">
-                    <div v-for="input in inputs" :key="input">
-                            <p class="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1">
-                                {{ input.name }}
-                            </p>
+                <div class="details space-y-5 mt-8">
+                    <div class="flex items-center space-x-3" v-for="listing in listings" :key="listing">
+                        <img class="" src="/svg/check.svg" alt="">
                         
-                            <input class="input w-full text-xs text-[#52575C] p-3 border rounded-2xl flex justify-between items-center" type="text" :placeholder="input.placeHolder" />
+                        <p class="id text-left text-xs text-[#52575C] font-medium ml-1">
+                            {{ listing.listItem }}
+                        </p>
                     </div>
                 </div>
-
-                <div class="remember-me my-5 flex items-center space-x-3">
-                    <div class="remember-me-button w-10 p-[3px] bg-gray-300 rounded-full focus:outline-none transition duration-500" @click="toggle">
-                        <div class="control w-4 h-4 rounded-full bg-white transition duration-500"></div>
-                    </div>
-
-                    <p class="remember-me text-xs font-medium" @click="toggle">
-                        Remember me
-                    </p>
-                </div>
-
-                <button class="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
-                    Register
-                </button>
-
-                <div class="already-have-an-account mt-5">
+                
+                <div class="terms mt-7">
                     <p class="text-xs text-[#A0AEC0]">
-                        Already have an account? <nuxt-link to="/login" class="text-[#03A86B] font-medium">Login</nuxt-link>
+                        By continuing, you agree to let Booking.com email you regarding your property registration.
                     </p>
                 </div>
+
+                <button class="register-btn px-7 py-2.5 mt-5 text-white text-xs font-medium bg-[#03A86B] rounded-lg">
+                    Get Started
+                </button>
             </form>
         </div>
     </section>
@@ -52,7 +32,25 @@
 
 <script>
 export default {
+    layout: 'clientRegistration',
 
+    data() {
+        return {
+            listings: [
+                {
+                    listItem: 'Listing is totally free'
+                },
+
+                {
+                    listItem: '24/7 costomer support'
+                },
+
+                {
+                    listItem: 'Set rules on property'
+                }
+            ]
+        }
+    }
 }
 </script>
 
