@@ -1,6 +1,6 @@
 <template>
   <div>
-      <nav class="absolute w-full top-0 left-0">
+      <nav class="w-full top-0 left-0 lg:absolute">
           <div class="nav-container py-6 px-5 flex justify-between items-center">
               <div class="left-container">
                   <div class="logo space-x-3 flex justify-center items-center">

@@ -1,34 +1,27 @@
 <template>
   <div>
-    <section class="login flex justify-center bg-[#F8F9FA]">
+    <section class="login flex justify-center">
       <div
-        class="login-container w-screen lg:w-[45%] h-screen bg-center bg-cover bg-no-repeat lg:flex flex-col justify-center space-y-5"
+        class="login-container w-screen lg:w-[45%] h-screen bg-center bg-cover bg-no-repeat lg:flex flex-col justify-center items-center space-y-5"
         style="background-image: url(/images/Splash-bg.png)"
       >
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl lg:hidden font-semibold text-center lg:text-left text-white leading-tight lg:px-10"
+            class="text-4xl font-semibold text-center lg:text-left text-white leading-tight lg:pl-16"
           >
-            Hello, list your property on Hostel.com
-          </h1>
-
-          <h1
-            class="text-4xl hidden lg:block font-semibold text-center lg:text-left text-white leading-tight lg:pl-16"
-          >
-            Hello, <br />
-            list your property on Hostel.com
+            Where’s your hostel located?
           </h1>
 
           <div
-            class="deats text-white font-semibold lg:text-left text-center px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
           >
-            Registration can take as little as 15 minutes to complete – get
-            started today
+            Once a customer books your hostel, this is the address that will be
+            shared with them.
           </div>
         </div>
 
-        <div class="form flex lg:hidden justify-center items-center">
+        <div class="form lg:hidden flex justify-center items-center">
           <form
             class="w-80 lg:w-[400px] sm:w-96 px-8 py-8 bg-white rounded-2xl shadow-xl"
             action=""
@@ -36,8 +29,16 @@
             <h2
               class="header font-sans font-bold text-[#2D3748] text-left text-xl lg:text-lg"
             >
-              Create new listing
+              Hostel address
             </h2>
+
+            <input
+              class="input w-full text-xs text-[#52575C] p-3 mt-5 border rounded-2xl flex justify-between items-center"
+              type="text"
+              placeholder="5007 Moore Motorway"
+            />
+
+            <p class="tips text-xs my-5 font-medium">Tips</p>
 
             <div class="details space-y-5 mt-8">
               <div
@@ -55,17 +56,17 @@
 
             <div class="terms mt-7">
               <p class="text-xs text-[#A0AEC0]">
-                By continuing, you agree to let Booking.com email you regarding
-                your property registration.
+                It's important that it's correct so our customers can easily
+                find your property.
               </p>
             </div>
 
-            <div class="mt-7">
+            <div class="continue mt-5">
               <nuxt-link
-                to="/hostelName"
-                class="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg"
+                to="/hostelType"
+                class="px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg"
               >
-                Get Started
+                Continue
               </nuxt-link>
             </div>
           </form>
@@ -73,9 +74,9 @@
       </div>
 
       <div
-        class="right-container lg:w-[55%] hidden lg:flex justify-center items-center"
+        class="right-container hidden lg:w-[55%] hidden lg:flex justify-center items-center"
       >
-        <div class="form hidden lg:flex justify-center items-center">
+        <div class="form flex justify-center items-center">
           <form
             class="w-80 lg:w-[400px] p-8 xl:p-10 bg-white rounded-2xl shadow-xl"
             action=""
@@ -83,8 +84,16 @@
             <h2
               class="header font-sans font-bold text-[#2D3748] text-left text-xl lg:text-lg"
             >
-              Create new listing
+              Hostel address
             </h2>
+
+            <input
+              class="input w-full text-xs text-[#52575C] p-3 mt-5 border rounded-2xl flex justify-between items-center"
+              type="text"
+              placeholder="5007 Moore Motorway"
+            />
+
+            <p class="tips text-xs my-5 font-medium">Tips</p>
 
             <div class="details space-y-5 mt-8">
               <div
@@ -102,17 +111,17 @@
 
             <div class="terms mt-7">
               <p class="text-xs text-[#A0AEC0]">
-                By continuing, you agree to let Booking.com email you regarding
-                your property registration.
+                It's important that it's correct so our customers can easily
+                find your property.
               </p>
             </div>
 
-            <div class="mt-7">
+            <div class="continue mt-5">
               <nuxt-link
-                to="/hostelName"
-                class="register-btn px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg"
+                to="/hostelType"
+                class="px-7 py-2.5 text-white text-xs font-medium bg-[#03A86B] rounded-lg"
               >
-                Get Started
+                Continue
               </nuxt-link>
             </div>
           </form>
@@ -124,21 +133,15 @@
 
 <script>
 export default {
-  layout: 'clientRegistration',
-
   data() {
     return {
       listings: [
         {
-          listItem: 'Listing is totally free',
+          listItem: 'Enter steet name and house number',
         },
 
         {
-          listItem: '24/7 costomer support',
-        },
-
-        {
-          listItem: 'Set rules on property',
+          listItem: 'Spell street name correctly',
         },
       ],
     }
