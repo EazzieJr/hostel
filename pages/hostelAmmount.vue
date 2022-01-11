@@ -8,7 +8,7 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl font-semibold text-center lg:text-left text-white leading-tight lg:px-16"
+            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight lg:px-16"
           >
             How much do you want to charge?
           </h1>

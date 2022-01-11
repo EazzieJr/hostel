@@ -14,14 +14,14 @@
           </h1>
 
           <h1
-            class="text-4xl hidden lg:block font-semibold text-center lg:text-left text-white leading-tight lg:pl-16"
+            class="text-4xl xl:text-5xl hidden lg:block font-semibold text-center lg:text-left text-white leading-tight lg:pl-16 xl:px-20 xl:leading-snug"
           >
             Hello, <br />
             list your property on Hostel.com
           </h1>
 
           <div
-            class="deats text-white font-semibold lg:text-left text-center px-16"
+            class="deats text-lg text-white font-semibold lg:text-left text-center px-16"
           >
             Registration can take as little as 15 minutes to complete – get
             started today
@@ -30,7 +30,7 @@
 
         <div class="form flex lg:hidden justify-center items-center">
           <form
-            class="w-80 lg:w-[400px] sm:w-96 px-8 py-8 bg-white rounded-2xl shadow-xl"
+            class="w-80 sm:w-96 px-8 py-8 bg-white rounded-2xl shadow-xl"
             action=""
           >
             <h2
@@ -77,7 +77,7 @@
       >
         <div class="form hidden lg:flex justify-center items-center">
           <form
-            class="w-80 lg:w-[400px] p-8 xl:p-10 bg-white rounded-2xl shadow-xl"
+            class="w-80 lg:w-[350px] p-8 xl:p-10 bg-white rounded-2xl shadow-xl"
             action=""
           >
             <h2

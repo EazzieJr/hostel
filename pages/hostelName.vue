@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="login flex justify-center">
+    <section class="login flex justify-center bg-[#F8F9FA]">
       <div
         class="login-container w-screen lg:w-[45%] h-screen bg-center bg-cover bg-no-repeat lg:flex lg:flex-col justify-center items-center space-y-5"
         style="background-image: url(/images/Splash-bg.png)"
@@ -8,13 +8,13 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl font-semibold text-center lg:text-left text-white leading-tight lg:pl-16"
+            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight xl:leading-normal lg:pl-16 xl:px-20"
           >
             What's the name of your hostel?
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20"
           >
             This is the name that will appear as the title of your listing on
             our site.
