@@ -21,7 +21,7 @@
           </h1>
 
           <div
-            class="deats text-lg text-white font-semibold lg:text-left text-center px-16"
+            class="deats text-lg text-white font-semibold lg:text-left text-center px-16 xl:px-20"
           >
             Registration can take as little as 15 minutes to complete – get
             started today
@@ -42,7 +42,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />
@@ -89,7 +89,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />

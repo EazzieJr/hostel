@@ -8,13 +8,13 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight px-10 lg:px-16"
+            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight xl:leading-snug px-10 lg:px-16 xl:px-20"
           >
             We need to verify your hostel.
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20 xl:pr-28"
           >
             Kindly provide the necessary details in time to complete the
             verification.
@@ -35,7 +35,7 @@
             <div class="id mt-7 space-y-5">
               <div
                 v-for="id in ids"
-                :key="id"
+                :key="id.id"
                 class="flex justify-between items-center"
               >
                 <div class="left-container">
@@ -88,7 +88,7 @@
             <div class="id mt-7 space-y-5">
               <div
                 v-for="id in ids"
-                :key="id"
+                :key="id.id"
                 class="flex justify-between items-center"
               >
                 <div class="left-container">

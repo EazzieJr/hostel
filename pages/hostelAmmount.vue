@@ -8,13 +8,13 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight lg:px-16"
+            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight xl:leading-snug lg:px-16 xl:px-20"
           >
             How much do you want to charge?
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20 xl:pr-32"
           >
             The price you would want our customers to book your hostel per room
             or apartment.

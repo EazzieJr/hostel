@@ -14,7 +14,7 @@
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20 xl:pr-32"
           >
             This is the name that will appear as the title of your listing on
             our site.
@@ -43,7 +43,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />
@@ -98,7 +98,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />

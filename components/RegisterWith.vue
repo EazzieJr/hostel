@@ -16,9 +16,9 @@
 
         <div class="social-medias-container flex space-x-5 mt-5">
           <button
-            class="social-media p-4 border rounded-xl"
             v-for="socialCard in socialCards"
-            :key="socialCard"
+            :key="socialCard.id"
+            class="social-media p-4 border rounded-xl"
           >
             <img class="w-5" :src="socialCard.image" alt="Facebook" />
           </button>
@@ -27,7 +27,7 @@
         <p class="or text-base text-[#A0AEC0] font-bold my-7">or</p>
 
         <div class="details space-y-5">
-          <div v-for="input in inputs" :key="input">
+          <div v-for="input in inputs" :key="input.id">
             <p
               class="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1"
             >
@@ -101,9 +101,9 @@
 
         <div class="social-medias-container flex space-x-5 mt-5">
           <button
-            class="social-media p-4 border rounded-xl"
             v-for="socialCard in socialCards"
-            :key="socialCard"
+            :key="socialCard.id"
+            class="social-media p-4 border rounded-xl"
           >
             <img class="w-5" :src="socialCard.image" alt="Facebook" />
           </button>
@@ -112,7 +112,7 @@
         <p class="or text-base text-[#A0AEC0] font-bold my-7">or</p>
 
         <div class="details space-y-5">
-          <div v-for="input in inputs" :key="input">
+          <div v-for="input in inputs" :key="input.id">
             <p
               class="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1"
             >
@@ -211,12 +211,12 @@ export default {
       if (!this.remembered) {
         control.classList.add('move')
         rememberBtn.classList.add('invert-color')
-        console.log('clickedIN')
+        // console.log('clickedIN')
         this.remembered = true
       } else {
         control.classList.remove('move')
         rememberBtn.classList.remove('invert-color')
-        console.log('clickedOUT')
+        // console.log('clickedOUT')
         this.remembered = false
       }
     },

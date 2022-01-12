@@ -8,13 +8,14 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight lg:pl-16 lg:pr-32"
+            class="text-4xl lg:text-5xl font-semibold text-center xl:text-left lg:text-left text-white leading-tight xl:leading-snug
+             lg:pl-16 xl:pl-20 lg:pr-32 xl:pr-60"
           >
             Type & Description
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20 xl:pr-32"
           >
             The type of hostel you’re listing. Description is the catchy line
             after the name.
@@ -34,9 +35,9 @@
 
             <div class="select-containers space-y-5 mt-5">
               <select
+                id="select"
                 class="w-full text-xs text-[#52575C] p-2 border bg-[#ffff0000] rounded-xl"
                 name="select"
-                id="select"
               >
                 <option value="text">Type</option>
                 <option value="text">Duplex</option>
@@ -45,9 +46,9 @@
               </select>
 
               <select
+                id="select"
                 class="w-full text-xs text-[#52575C] p-2 border bg-[#ffff0000] rounded-xl"
                 name="select"
-                id="select"
               >
                 <option value="text">No. of rooms</option>
                 <option value="text">1</option>
@@ -112,7 +113,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />

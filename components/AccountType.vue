@@ -15,7 +15,7 @@
         </h2>
 
         <div class="account-types space-y-5 mt-7">
-          <div v-for="accountType in accountTypes" :key="accountType">
+          <div v-for="accountType in accountTypes" :key="accountType.id">
             <div
               class="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center"
             >
@@ -65,7 +65,7 @@
         </h2>
 
         <div class="account-types space-y-5 mt-7">
-          <div v-for="accountType in accountTypes" :key="accountType">
+          <div v-for="accountType in accountTypes" :key="accountType.id">
             <div
               class="w-full input-for-account-type p-3 border rounded-2xl flex justify-between items-center"
             >

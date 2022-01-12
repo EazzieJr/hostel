@@ -16,9 +16,9 @@
 
         <div class="social-medias-container flex space-x-5 mt-5">
           <button
-            class="social-media p-4 border rounded-xl"
             v-for="socialCard in socialCards"
-            :key="socialCard"
+            :key="socialCard.id"
+            class="social-media p-4 border rounded-xl"
           >
             <img class="w-5" :src="socialCard.image" alt="Facebook" />
           </button>
@@ -27,7 +27,7 @@
         <p class="or text-base text-[#A0AEC0] font-bold my-7">or</p>
 
         <div class="details space-y-5">
-          <div v-for="input in inputs" :key="input">
+          <div v-for="input in inputs" :key="input.id">
             <p
               class="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1"
             >
@@ -102,7 +102,7 @@
         <div class="social-medias-container flex space-x-5 mt-5">
           <button
             v-for="socialCard in socialCards"
-            :key="socialCard"
+            :key="socialCard.id"
             class="social-media p-4 border rounded-xl"
           >
             <img class="w-5" :src="socialCard.image" alt="Facebook" />
@@ -112,7 +112,7 @@
         <p class="or text-base text-[#A0AEC0] font-bold my-7">or</p>
 
         <div class="details space-y-5">
-          <div v-for="input in inputs" :key="input">
+          <div v-for="input in inputs" :key="input.id">
             <p
               class="id text-left text-xs text-[#52575C] font-medium mb-2 ml-1"
             >
@@ -129,11 +129,10 @@
 
         <div class="remember-me my-5 flex items-center space-x-3">
           <div
-            class="remember-me-button w-10 p-[3px] bg-gray-300 rounded-full focus:outline-none transition duration-500"
-            @click="toggle"
+            class="remember-me-button w-10 p-[3px] bg-gray-300 rounded-full focus:outline-none transition duration-500" @click="toggle"
           >
             <div
-              class="control w-4 h-4 rounded-full bg-white transition duration-500"
+              class="control-big w-4 h-4 rounded-full bg-white transition duration-500"
             ></div>
           </div>
 
@@ -199,18 +198,16 @@ export default {
 
   methods: {
     toggle() {
-      const control = document.querySelector('.control')
+      const control = document.querySelector('.control, .control-big')
       const rememberBtn = document.querySelector('.remember-me-button')
 
       if (!this.remembered) {
         control.classList.add('move')
         rememberBtn.classList.add('invert-color')
-        console.log('clickedIN')
         this.remembered = true
       } else {
         control.classList.remove('move')
         rememberBtn.classList.remove('invert-color')
-        console.log('clickedOUT')
         this.remembered = false
       }
     },

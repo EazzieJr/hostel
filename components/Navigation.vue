@@ -3,13 +3,13 @@
       <nav class="w-full top-0 left-0 lg:absolute">
           <div class="nav-container py-6 xl:py-8 px-5 xl:px-14 flex justify-between items-center">
               <div class="left-container">
-                  <div class="logo space-x-3 xl:space-x-5 flex justify-center items-center">
+                  <nuxt-link to="/" class="logo space-x-3 xl:space-x-5 flex justify-center items-center">
                       <img class="w-10 xl:w-12" src="/svg/logo.svg" alt="Logo">
 
                       <div class="text xl:text-lg text-white font-medium">
                           Hostel
                       </div>
-                  </div>
+                  </nuxt-link>
               </div>
 
               <div class="right-container flex justify-center items-center space-x-3 xl:space-x-5">

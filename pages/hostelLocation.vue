@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="login flex justify-center">
+    <section class="login flex justify-center`bg-[#F8F9FA]">
       <div
         class="login-container w-screen lg:w-[45%] h-screen bg-center bg-cover bg-no-repeat lg:flex flex-col justify-center items-center space-y-5"
         style="background-image: url(/images/Splash-bg.png)"
@@ -8,13 +8,13 @@
         <Navigation />
         <div class="info py-10 space-y-4">
           <h1
-            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight lg:pl-16"
+            class="text-4xl lg:text-5xl font-semibold text-center lg:text-left text-white leading-tight lg:leading-snug lg:pl-16 xl:px-20"
           >
             Where’s your hostel located?
           </h1>
 
           <div
-            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16"
+            class="deats text-white font-semibold text-center lg:text-left px-10 lg:px-16 xl:px-20 xl:pr-32"
           >
             Once a customer books your hostel, this is the address that will be
             shared with them.
@@ -43,7 +43,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />
@@ -74,7 +74,7 @@
       </div>
 
       <div
-        class="right-container hidden lg:w-[55%] hidden lg:flex justify-center items-center"
+        class="right-container hidden lg:w-[55%] lg:flex justify-center items-center"
       >
         <div class="form flex justify-center items-center">
           <form
@@ -98,7 +98,7 @@
             <div class="details space-y-5 mt-8">
               <div
                 v-for="listing in listings"
-                :key="listing"
+                :key="listing.id"
                 class="flex items-center space-x-3"
               >
                 <img class="" src="/svg/check.svg" alt="" />
